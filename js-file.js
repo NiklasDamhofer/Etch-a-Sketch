@@ -1,5 +1,4 @@
 const container = document.querySelector('#main-container');
-const div = document.createElement('div');
 
 
 function createRows(nr) {
@@ -13,3 +12,7 @@ function createRows(nr) {
 };
 
 createRows(80);
+
+function changeColor() {
+    if ()
+}
