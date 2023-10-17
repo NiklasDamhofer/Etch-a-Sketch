@@ -1,5 +1,4 @@
 const container = document.querySelector('#main-container');
-const div = document.createElement('div');
 
 
 function createRows(nr) {
@@ -7,22 +6,13 @@ function createRows(nr) {
     for (var i = 0; i < num; i++) {
         const content = document.createElement('div');
         content.classList.add('container');
-        container.append(content);       
+        container.append(content); 
+        container.setAttribute('style', `grid-template-columns: repeat(${nr}, 1fr); grid-template-rows: repeat(${nr}, 1fr);`);      
     };
 };
 
-createRows(16);
+createRows(80);
 
-const colContainer = document.getElementsByClassName('container');
-
-
-   
-
-function createCols(num) {
-    const cols = document.createElement('div');
-    cols.classList.add('containerInit');
-    colContainer.append(cols);
+function changeColor() {
+    if ()
 }
-//const content = document.createElement('div');
-//content.classList.add('container');
-//container.appendChild(content);
