@@ -1,37 +1,28 @@
 const container = document.querySelector('#main-container');
-let rows = document.getElementsByClassName("gridRow");
-let cells = document.getElementsByClassName("cell");
+const div = document.createElement('div');
 
-function defaultGrid() {
-    makeRows(16);
-    makeColumns(16);
+
+function createRows(nr) {
+    let num = nr * nr;
+    for (var i = 0; i < num; i++) {
+        const content = document.createElement('div');
+        content.classList.add('container');
+        container.append(content);       
+    };
+};
+
+createRows(16);
+
+const colContainer = document.getElementsByClassName('container');
+
+
+   
+
+function createCols(num) {
+    const cols = document.createElement('div');
+    cols.classList.add('containerInit');
+    colContainer.append(cols);
 }
-
-function makeRow(rowNum) {
-    for (let i = 0; i < rowNum; i++) {
-        let row = document.createElement("div");
-        container.appendChild(row).className = "gridRow";
-    };
-};
-
-function makeColumns(cellNum) {
-    for (let r = 0; r < cellNum; r++) {
-        for (let c = 0; c < cellNum; c++) {
-            let newCell = document.createElement("div");
-            row[c].appendChild(newCell).className = "cell";
-        };
-    };
-};
-
-
-function makeRows(rows, cols) {
-    container.style.setProperty('--grid-rows', rows);
-    container.style.setProperty('--grid-cols', cols);
-    for (let c = 0; c < (rows * cols); c++) {
-        let cell = document.createElement('div');
-        cell.innerText = (c + 1);
-        container.appendChild(cell).className = "gird-item";
-    };
-};
-
-makeRows(16, 16);
+//const content = document.createElement('div');
+//content.classList.add('container');
+//container.appendChild(content);
