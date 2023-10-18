@@ -15,11 +15,14 @@
         <div id="main-div">
             <div id="buttons">
                 <div id="align-center">
-                <div id="color-choices" class="color-choices"></div>
-                <button id="btn1" type="button" class="button" >Color Mode</button>
-                <button id="btn2" type="button" class="button" >Rainbow Mode</button>
-                <button id="btn3" type="button" class="button" >Erase</button>
-                <button id="btn4" type="button" class="button" >Clear</button>
+                    <input type="color" id="color-choices" class="color-choices" />
+                    <button id="btn1" type="button" class="button" >Use Color</button>
+                    <button id="btn3" type="button" class="button" >Erase</button>
+                    <button id="btn4" type="button" class="button" >Reset</button>
+                    <div id="setSize">
+                    <input type="text" placeholder="Size of Board" value="16" class="inputField" onchange="changeSize(this.value)" />
+                    <button id="btn5" type="button" class="sizeButton">Set Size</button>
+                    </div>
                 </div>
             </div>
             <div id="main-container" class="main-container">
